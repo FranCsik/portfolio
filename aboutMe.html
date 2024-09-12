@@ -4,34 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/headerFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aboutMe.html">Sobre mi</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
-                <li><a href="curriculum.html">Curriculum</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <p>Francisco Csik</p>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </label>
+        
+              <ul>
+                <li class="mobile-categories"><a href="index.html">Inicio</a></li>
+                <li class="mobile-categories"><a href="aboutMe.html">Sobre mi</a></li>
+                <li class="mobile-categories"><a href="portafolio.html">Portafolio</a></li>
+                <li class="mobile-categories"><a href="curriculum.html">Curriculum</a></li>
+                <li class="mobile-categories"><a href="servicios.html">Servicios</a></li>
+                <li class="mobile-categories"><a href="contacto.html">Contacto</a></li>
+
+              </ul>
+              
+            </div>
         </nav>
     </header>
-    
-    <h1>¿Quien soy?</h1>
-    <p>Soy Francisco, hace dos años me dedico al análisis de datos. Trabajé en varios rubros, en varias empresas y con diversas tecnologías.</p>
-    <h2>Objetivos</h2>
-    <p>Mi objetivo es ayudar a las empresas a generar el máximo rendimiento gracias a la correcta utilización de los datos. Además, me gusta trabajar en proyectos donde pueda desarrollar nuevas habilidades.</p>
-    <h3>Filosofía de trabajo</h3>
-    <p>Siempre es dar lo mejor, me gusta recibir feedback al terminar los proyectos para poder seguir mejorando como profesional.</p>
+    <section class="aboutMe">
+        <h1 class="whoIAm">¿Quien soy?</h1>
+        <p>Soy Francisco, hace dos años me dedico al análisis de datos. Trabajé en varios rubros, en varias empresas y con diversas tecnologías.</p>
+        <h2>Objetivos</h2>
+        <p>Mi objetivo es ayudar a las empresas a generar el máximo rendimiento gracias a la correcta utilización de los datos. Además, me gusta trabajar en proyectos donde pueda desarrollar nuevas habilidades.</p>
+        <h3>Filosofía de trabajo</h3>
+        <p>Siempre es dar lo mejor, me gusta recibir feedback al terminar los proyectos para poder seguir mejorando como profesional.</p>
+    </section>
 
     <footer>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/franciscocsik/" target="_blank">Linkedin</a></li>
-            <li>+54 9 11 5555 4444</li>
-            <li>fcsik@uade.edu.ar</li>
-        </ul>
+        <p>Francisco Csik - Todos los derechos reservados</p>
     </footer>
 </body>
 </html>

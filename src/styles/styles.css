@@ -1,0 +1,294 @@
+:root{
+    --color-1: #87AECE;
+    --text-color: #000000;
+  }
+*{
+      padding: 0;
+      margin: 0;
+}
+html{font-family: "Inter";}
+  
+body{
+      background-color: #F5F3D8;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column
+  }
+
+section{
+    margin: 15px 25px 35px 25px;
+}
+
+h1{
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+h3{
+    font-size: 27px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+li{
+    font-size: 20px;
+}
+
+img{
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.whoIAm{
+    font-size: 55px;
+    text-align: center;
+}
+
+/* ---- */
+
+section.portfolio, section.curriculum{
+    margin: 0px;
+}
+
+section.portfolio h1, section.curriculum h1{
+    margin: 15px 25px 35px 25px;
+}
+
+tr:nth-of-type(even){
+    background-color: #FFFFFF;
+}
+
+tr:nth-of-type(odd){
+    background-color: #D9D9D9;
+}
+
+table{
+    max-width: 1000px;
+    margin: auto;
+    border-collapse: collapse;
+}
+td, th{
+    border-collapse: collapse;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+
+
+@media (max-width: 720px){
+    tbody,tr,td{
+        display: block;
+        border: none;
+    }
+    .headRow{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    
+    }
+    table{
+        border-collapse: collapse;
+    }
+    
+    td{
+        position: relative;
+        padding-left: 40%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        white-space: normal;
+        text-align: left;
+    }
+    
+    td:before{
+        content: attr(data-label);
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        width: 40%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        content: attr(data-label);
+    }
+}
+
+/* --SERVICIOS-- */
+
+section.services ul li{
+    padding-bottom: 10px;
+    list-style-position:inside
+}
+
+/*--CURRICULUM--*/
+
+section.curriculum div.otherExperiences{margin: 15px 25px 35px 25px;}
+
+section.curriculum div.otherExperiences ul li, section.curriculum div.otherExperiences ol li{
+    list-style-position:inside;
+    font-size: 14px;
+}
+
+div.otherExperiences h3, div.otherExperiences h4{
+    font-size: 27px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+div.otherExperiences a{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* --CONTACTO-- */
+
+.divForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form#contactForm{
+    width: 90%;
+}
+
+form#contactForm input, form#contactForm textarea, form#contactForm button, form#contactForm select{
+    margin-top: 10px;
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    background-color: (red, green, blrgbue);
+}
+
+form#contactForm textarea{
+    height: 100px;
+}
+
+form#contactForm label{
+    display: block;
+    margin-top: 15px;
+}
+
+form#contactForm button{
+    margin-top: 20px;
+    height: 50px;
+    background-color: #89E798;
+}
+form#contactForm label{font-size: 20px;}
+
+@media (min-width: 1020px){
+
+    /*--HOME PAGE--*/
+    section.homePage{
+        max-width: 1000px;
+        margin: auto;
+        margin-top: auto;
+    }
+    .container{
+        display: inline-block;
+        min-width: 100vh;
+    }
+    .item-1{
+        margin-top: 30px;
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+    .item-2{
+        grid-column: 4/6;
+        grid-row: 1/6;
+    }
+    .item-3{
+        grid-column: 1/4;
+        grid-row: 3/6;
+    }
+    section.homePage{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        height: 100%;
+    }
+
+    /*--SOBRE MI--*/
+    section.aboutMe{
+        max-width: 500px;
+        margin: auto;
+        margin-top: auto;
+    }
+
+    /*--CURRICULUM --*/
+    section.curriculum h1, section.curriculum h2 {
+        text-align: 
+        center;
+        margin-top: 30px;
+    }
+    section.curriculum h3, section.curriculum h4{
+        margin-top: 40px;
+        display: inline-block;
+        padding: 0px;
+    }
+    section.curriculum ul{
+        max-width: 720px; 
+        margin: auto; 
+        margin-top: 25px;
+    }
+    section.curriculum ol{
+        min-width: 231px; 
+        margin-top: 25px;
+    }
+    section.curriculum div.otherExperiences{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    section.curriculum div.skills{
+        max-width: 220px;
+    }
+    section.curriculum .skills-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    section.curriculum a{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    /*--SERVICIOS--*/
+    section.services{
+        max-width: 520px;
+        margin: auto;
+        margin-top: auto;
+    }
+    section.services h1{
+        font-size: 60px;
+    }
+    section.services p{
+        margin-top: 30px;
+    }
+
+    /*CONTACTO*/
+    section.contact h1{
+        text-align: center;
+    }
+    section.contact div.divForm{
+        width: 290px;
+        margin: auto;
+    }
+    
+}

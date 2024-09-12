@@ -4,73 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partafolio</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="stylesheet" href="src/styles/headerFooter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="aboutMe.html">Sobre mi</a></li>
-                <li><a href="portafolio.html">Portafolio</a></li>
-                <li><a href="curriculum.html">Curriculum</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+            <p>Francisco Csik</p>
+            <input type="checkbox" id="sidebar-active">
+            <label for="sidebar-active" class="open-sidebar-button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+            <label id="overlay" for="sidebar-active"></label>
+            <div class="links-container">
+              <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+              </label>
+        
+              <ul>
+                <li class="mobile-categories"><a href="index.html">Inicio</a></li>
+                <li class="mobile-categories"><a href="aboutMe.html">Sobre mi</a></li>
+                <li class="mobile-categories"><a href="portafolio.html">Portafolio</a></li>
+                <li class="mobile-categories"><a href="curriculum.html">Curriculum</a></li>
+                <li class="mobile-categories"><a href="servicios.html">Servicios</a></li>
+                <li class="mobile-categories"><a href="contacto.html">Contacto</a></li>
+
+              </ul>
+              
+            </div>
         </nav>
     </header>
 
-    <h1>Proyectos en los que trabajé</h1>
-    <table>
-        <tr>
-            <th>Rol</th>
-            <th>Empresa</th>
-            <th>Proyecto</th>
-            <th>Tecnologías</th>
-            <th>Resultados</th>
-        </tr>
-        <tr>
-            <td>Data Analyst</td>
-            <td>Mindata</td>
-            <td>implementación de PowerBi para visualizar principales métricas del equipo de selección.</td>
-            <td>PowerBi, Python, DAX, PowerQuery</td>
-            <td>Implementación en la nube de un dashboard en PowerBi para que los gerentes del área tengan acceso a todo momento y en tiempo de real de la performance de su equipo.</td>
-        </tr>
-        <tr>
-            <td>Data Analyst</td>
-            <td>American Express</td>
-            <td>Implementación de dashboard de Marketing</td>
-            <td>PowerBi, SQL</td>
-            <td>Desarrollo de un dashboard en PowerBi, consumiendo datos del data warehouse del equipo de Marketing para analizar la performance de las distintas campañas de marketing.</td>
-        </tr>
-        <tr>
-            <td>Data Analyst</td>
-            <td>American Express</td>
-            <td>Dashboard de transacciones con Amex</td>
-            <td>PowerBi, SQL</td>
-            <td>Implementación de un dashboard para ver las transacciones de los clientes a lo largo del país y con esta información ver donde es conveniente hacer campañas de Marketing.</td>
-        </tr>
-        <tr>
-            <td>Data Analyst</td>
-            <td>Laboratorios Servier</td>
-            <td>Dashboard de prescripciones médicas</td>
-            <td>PowerBi, DAX, SQL</td>
-            <td>Creé un dashboard para ver las zonas del país donde más se prescriben los productos de la compañía. Además del desarrollo de metricas para ver dónde enfocar los esfuerzos del equipo de visitadores médicos.</td>
-        </tr>
-        <tr>
-            <td>Data Analyst</td>
-            <td>Laboratorios Servier</td>
-            <td>Dashboard para ver las ventas de la compañía y de la competencia</td>
-            <td>PowerBi, DAX</td>
-            <td>Desarrollo de un dashboard para ver el market share de la compañía en las distintas áreas terapeuticas donde tiene productos.</td>
-        </tr>
-    </table>
+    <section class="portfolio">
+        <h1>Proyectos en los que trabajé</h1>
+        <table>
+            <thead>
+              <tr class="headRow">
+                <th scope="col">Rol</th>
+                <th scope="col">Empresa</th>
+                <th scope="col">Proyecto</th>
+                <th scope="col">Tecnologías</th>
+                <th scope="col">Resultados</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Rol">Data Analyst</td>
+                    <td data-label="Empresa">Mindata</td>
+                    <td data-label="Proyecto">Implementación en la nube de un dashboard en PowerBi para que los gerentes del área tengan acceso a todo momento y en tiempo de real de la performance de su equipo.</td>
+                    <td data-label="Tecnologías">PowerBi, Python, DAX, PowerQuery</td>
+                    <td data-label="Resultados">Implementación en la nube de un dashboard en PowerBi para que los gerentes del área tengan acceso a todo momento y en tiempo de real de la performance de su equipo.</td>
+                </tr>
+                <tr>
+                    <td data-label="Rol">Data Analyst</td>
+                    <td data-label="Empresa">American Express</td>
+                    <td data-label="Proyecto">Implementación de dashboard de Marketing</td>
+                    <td data-label="Tecnologías">PowerBi, SQL</td>
+                    <td data-label="Resultados">Desarrollo de un dashboard en PowerBi, consumiendo datos del data warehouse del equipo de Marketing para analizar la performance de las distintas campañas de marketing.</td>
+                </tr>
+                <tr>
+                    <td data-label="Rol">Data Analyst</td>
+                    <td data-label="Empresa">American Express</td>
+                    <td data-label="Proyecto">Dashboard de transacciones con Amex</td>
+                    <td data-label="Tecnologías">PowerBi, SQL</td>
+                    <td data-label="Resultados">Implementación de un dashboard para ver las transacciones de los clientes a lo largo del país y con esta información ver donde es conveniente hacer campañas de Marketing.</td>
+                </tr>
+                <tr>
+                    <td data-label="Rol">Data Analyst</td>
+                    <td data-label="Empresa">Laboratorios Servier</td>
+                    <td data-label="Proyecto">Dashboard de prescripciones médicas</td>
+                    <td data-label="Tecnologías">PowerBi, SQL</td>
+                    <td data-label="Resultados">Creé un dashboard para ver las zonas del país donde más se prescriben los productos de la compañía. Además del desarrollo de metricas para ver dónde enfocar los esfuerzos del equipo de visitadores médicos.</td>
+                </tr>
+                <tr>
+                    <td data-label="Rol">Data Analyst</td>
+                    <td data-label="Empresa">Laboratorios Servier</td>
+                    <td data-label="Proyecto">Dashboard para ver las ventas de la compañía y de la competencia</td>
+                    <td data-label="Tecnologías">PowerBi, SQL</td>
+                    <td data-label="Resultados">Desarrollo de un dashboard para ver el market share de la compañía en las distintas áreas terapeuticas donde tiene productos.</td>
+                </tr>
+            </tbody>
+          </table>
+    </section>
 
     <footer>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/franciscocsik/" target="_blank">Linkedin</a></li>
-            <li>+54 9 11 5555 4444</li>
-            <li>fcsik@uade.edu.ar</li>
-        </ul>
+        <p>Francisco Csik - Todos los derechos reservados</p>
     </footer>
 
 </body>
